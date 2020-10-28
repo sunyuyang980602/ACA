@@ -30,6 +30,29 @@ def MUL(x, y):
             ans[i+j+1] = ans[i+j+1] ^ (x[i] & y[j])
     return ans[l:]
 
+def EQUAL(x, y):
+    l=len(x)
+    for i in range(l):
+        if x[i] ^ y[i]:
+            return False
+    return True
+
+def AND(x,y):
+    tmp=[0 for i in range(len(x))]
+    for i in range(len(x)):
+        tmp[i]=x[i] & y[i]
+
+
+def OR(x,y):
+    tmp=[0 for i in range(len(x))]
+    for i in range(len(x)):
+        tmp[i]=x[i] | y[i]
+
+
+def XOR(x,y):
+    tmp=[0 for i in range(len(x))]
+    for i in range(len(x)):
+        tmp[i]=x[i] ^ y[i]
 def GT(x, y):
     #Greater than
     l=len(x)

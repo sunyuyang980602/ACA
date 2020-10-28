@@ -1,3 +1,10 @@
+def EQUAL(x, y):
+    l=len(x)
+    for i in range(l):
+        if x[i] ^ y[i]:
+            return False
+    return True
+
 def ADD(x, y):
     l=len(x);
     ans=[0 for i in range(l)]   ##结果
@@ -48,6 +55,23 @@ def GE(x, y):
             pass
     return True
     
+
+def AND(x,y):
+    tmp=[0 for i in range(len(x))]
+    for i in range(len(x)):
+        tmp[i]=x[i] & y[i]
+
+
+def OR(x,y):
+    tmp=[0 for i in range(len(x))]
+    for i in range(len(x)):
+        tmp[i]=x[i] | y[i]
+
+
+def XOR(x,y):
+    tmp=[0 for i in range(len(x))]
+    for i in range(len(x)):
+        tmp[i]=x[i] ^ y[i]
     
 def NEXT(x):
     tmp = [0 for i in x]
